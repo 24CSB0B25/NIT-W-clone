@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITW Clone Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3ebeb;
+        }
+
+        /* Header with centered logo */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #252323;
+            padding: 10px;
+        }
+
+        .logo img {
+            height: 250px;
+        }
+        .nav-bar {
+            background-color: #f9f1f1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav-bar a {
+            color: rgb(19, 18, 18);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        /* Announcements Section */
+        .announcements {
+            background-color: #0e18dc;
+            color: #e1f008;
+            font-size: 23px;
+            padding: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .announcements p {
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Image Slider */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 400px;
+            display: none;
+        }
+
+        .slides img.active {
+            display: block;
+        }
+
+        /* News & Events Section */
+        .news-events {
+            padding: 20px;
+        }
+
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .news-card {
+            background: rgb(196, 177, 12);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .campus-life {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .campus-life img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Centered Logo -->
+    <div class="header">
+        <div class="logo">
+            <img src="https://www.pngitem.com/pimgs/m/297-2977372_national-institute-of-technology-warangal-hd-png-download.png" alt="NITW Logo">
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Admissions</a>
+        <a href="#">Departments</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Announcements Section -->
+    <div class="announcements">
+        <p>Important Announcement: Spring Spree , the annual fest of NITW is from 28th-feb to 2nd-march  </p>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img class="active" src="https://cache.careers360.mobi/media/article_images/2022/8/23/featured-image-nit-warangal.jpg" alt="Campus 1">
+            <img class="active" src="https://th.bing.com/th/id/OIP.5nBtLLYnWBy-0TvfpQKOpgHaE8?rs=1" alt="Campus 2">
+            <img class="active" src="https://images.shiksha.com/mediadata/images/1546930449phpkgwgey.png" alt="Campus 3">
+        </div>
+    </div>
+
+    <!-- News & Events Section -->
+    <div class="news-events">
+        <h1>Latest News & Events</h1>
+        <div class="news-container">
+            <div class="news-card">
+                <h2>1.</h2>
+                <h3>The institute's cultural fest spring spree is starting from 1st feb .</h3>
+            </div>
+            <div class="news-card">
+                <h2>2.</h2>
+                <h3>The electric vehicles of the institute will be installed with GPS systems so that anyone can find where they exactly are .</h3>
+            </div>
+            <div class="news-card">
+                <h2>3.</h2>
+                <h3>The IPL(Institute premier league ) will be starting from 23rdMarch  .</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Image Slider Script
+        let index = 0;
+        const slides = document.querySelectorAll(".slides img");
+        function changeSlide() {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
+        setInterval(changeSlide, 3000);
+    </script>
+    <h1 > Campus Life </h1>
+    <div class="campus-life">
+        <img src="https://th.bing.com/th/id/OIP.5nBtLLYnWBy-0TvfpQKOpgHaE8?rs=1&pid=ImgDetMain" alt="Campus Image 1"> <!-- Replace with your images -->
+        <img src="https://th.bing.com/th/id/R.d84bf2c7658f4fcc8a593512630fc2d9?rik=2mGZT15MNCqF%2fA&riu=http%3a%2f%2fphotos.wikimapia.org%2fp%2f00%2f02%2f12%2f66%2f54_full.jpeg&ehk=4QSJKieAETxiLaMx9MP9Egk2O2GCdys7ISA3fHn%2fkpY%3d&risl=&pid=ImgRaw&r=0" alt="Campus Image 2"> <!-- Replace with your images -->
+        <img src="https://th.bing.com/th/id/R.5ccf43a498e934f0a3c0049fafded425?rik=TCmIDezrDboGTw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-pRyKXGC8u2k%2fTtUKRocXOCI%2fAAAAAAAAAIo%2fQUxwAni_F8w%2fs1600%2f7.jpg&ehk=RYZN0T9FxelzQz2okvcAOby2G41CMt0EayrZayBGDZo%3d&risl=&pid=ImgRaw&r=0" alt="Campus Image 3"> <!-- Replace with your images -->
+        <img src="https://th.bing.com/th/id/OIP.GFNB52wwNHeyRL8WECJwiwHaE8?rs=1&pid=ImgDetMain" alt="Campus Image 3"> <!-- Replace with your images -->
+    </div>
+</body>
+</html>
